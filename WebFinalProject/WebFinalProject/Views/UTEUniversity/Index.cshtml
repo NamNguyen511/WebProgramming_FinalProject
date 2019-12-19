@@ -1,0 +1,95 @@
+﻿@{
+		ViewData["Title"] = "Index";
+    }
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<IdentityUser> _signInManager;
+	
+	<!DOCTYPE HTML>
+	  <html lang="en" class="no-js">
+	<!--
+		Industrious by TEMPLATED
+		templated.co 
+		Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	-->
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+			<meta name="description" content="" />
+			<meta name="keywords" content="" />
+			<link rel="stylesheet" href="~/css/main.css" />
+			<link rel="stylesheet" href="~/lib/fonntawesome-free-5.12.0-web/css/fontawesome.min.css" />
+		</head>
+		<body >
+		
+			<!-- Banner -->
+				<section id="banner">
+					<div class="inner">
+						<h1>UTE Mangament Sysytem</h1>
+						<p>A responsive Management System oriented template with a video background<br />
+						designed by E.D.I.T.H team .</p>
+					</div>
+					<video autoplay loop muted playsinline src="~/Images/banner.mp4"></video>
+				</section>
+	
+			<!-- Highlights -->
+				<section class="wrapper">
+					<div class="inner">
+						<header class="special">
+							<h2>E.D.I.T.H Group</h2>
+							<p></p>
+						</header>
+						<div class="highlights">
+						
+							<section>
+								<div class="content">
+									<header>
+										<a href="#" class="icon fa-graduation-cap"><span class="label">Icon</span></a>
+										<h3>Student</h3>
+									</header>
+									<p>List all information of students. Helping users to know about basic information of students.</p>
+								</div>
+							</section>
+							<section>
+								<div class="content">
+									<header>
+										<a href="#" class="icon fa-address-card"><span class="label">Icon</span></a>
+										<h3>Instructor</h3>
+									</header>
+									<p>List all the information of the teacher who has enrolled in the course.
+                                    Furthermore, you can view the students who have enrolled in the course and are taught by the course teacher.</p>
+								</div>
+							</section>
+							<section>
+								<div class="content">
+									<header>
+										<a href="#" class="icon  fa-building"><span class="label">Icon</span></a>
+										<h3>Department</h3>
+									</header>
+									<p>List which courses belong to which department.</p>
+								</div>
+							</section>
+						
+							<section>
+								<div class="content">
+									<header>
+										<a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
+										<h3>Course</h3>
+									</header>
+									<p>List all information of course .</p>
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
+	
+		</div>
+			<!-- Scripts -->
+				<script src="https://kit.fontawesome.com/eac6ca1fa1.js" crossorigin="anonymous"></script>
+				<script src="~/js/jquery.min.js"></script>
+				<script src="~/js/browser.min.js"></script>
+				<script src="~/js/breakpoints.min.js"></script>
+				<script src="~/js/util.js"></script>
+				<script src="~/js/main.js"></script>
+	
+		</body>
+	</html>

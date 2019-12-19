@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WebFinalProject.Models.Course>
+@inject SignInManager<IdentityUser> _signInManager;
+@{
+    ViewData["Title"] = "Course";
+}
+
+<h1>Course</h1>
+
+<h3>Course List</h3>
+@if (_signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+{
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+}
+<div>
+    <form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CourseID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Credits)
+                    </th>
+                   <th>
+                       @Html.DisplayNameFor(model => model.Department)
+                   </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var items in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(itemsModel => items.CourseID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemsModel => items.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemsModel => items.Credits)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemsModel => items.Department.Name)
+                        </td>
+                        @if (_signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                        {
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@items.CourseID">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@items.CourseID">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@items.CourseID">Delete</a>
+                        </td>
+                        }
+                        else
+                        {
+                            <td>
+                           <a asp-action="Details" asp-route-id="@items.CourseID">Details</a>
+                                </td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </form>
+</div>

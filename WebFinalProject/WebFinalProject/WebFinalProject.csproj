@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.1" />
+    <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.7" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Views\UTEUniversity\" />
+    <Folder Include="Views\Student\" />
+    <Folder Include="Views\Instructor\" />
+    <Folder Include="Views\Course\" />
+    <Folder Include="Views\Department\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Views\Administration\" />
+    <Folder Include="wwwroot\Images\" />
+    <Folder Include="Models\SchoolViewModels\" />
+    <Folder Include="Views\CourseAssignment\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Data\UTEUniversityContext.css" />
+    <None Remove="Views\Account\Register.cshmtl" />
+    <None Remove="Views\Administration\EditUserInRole.cshtml" />
+    <None Remove="Models\SchoolViewModels\ResetPassword.html" />
+    <None Remove="Views\Department\Edit.cshmtl" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<WebFinalProject.Models.Department>
+@inject SignInManager<IdentityUser> signManager;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Department</h1>
+
+<h3>Department List</h3>
+@if (signManager.IsSignedIn(User) && User.IsInRole("Admin"))
+{
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+}
+
+<div>
+    <form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Budget)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.StartDate)
+                    </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var items in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(itemsModel => items.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemsModel => items.Budget)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemsModel => items.StartDate)
+                        </td>
+                       @if (signManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                       {
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@items.DepartmentID">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@items.DepartmentID">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@items.DepartmentID">Delete</a>
+                        </td>
+                       }
+                       else 
+                       {
+                           <td>
+                        <a asp-action="Details" asp-route-id="@items.DepartmentID">Details</a>
+                               </td>
+                       }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </form>
+</div>

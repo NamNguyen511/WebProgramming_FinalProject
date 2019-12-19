@@ -1,0 +1,43 @@
+﻿@model WebFinalProject.Models.Student
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<p>Student</p>
+<hr />
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <label asp-for="FirstName" class="control-label"></label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LastName" class="control-label"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Birthday" class="control-label"></label>
+        <input asp-for="Birthday" class="form-control" />
+        <span asp-validation-for="Birthday" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EnrollmentDate" class="control-label"></label>
+        <input asp-for="EnrollmentDate" class="form-control" />
+        <span asp-validation-for="EnrollmentDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+
+    <p>
+        <a asp-action="Index">Back to list</a>
+    </p>
+</form>

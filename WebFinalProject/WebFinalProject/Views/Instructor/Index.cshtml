@@ -1,0 +1,137 @@
+﻿@model WebFinalProject.Models.SchoolViewModels.InstructorIndexData;
+@inject SignInManager<IdentityUser> signInManager;
+@{
+    ViewData["Title"] = "Instructor";
+}
+
+<h1>Instructor</h1>
+
+<p>Instructor List</p>
+@if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+
+<div>
+    <form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>HireDate</th>
+                    <th>Courses</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var items in Model.Instructors)
+                {
+                    string selectedRow = "";
+                    if(items.InstructorID == (int?)ViewData["InstructorID"])
+                    {
+                        selectedRow = "Success";
+                    }
+                    <tr class="@selectedRow">
+                        <td>
+                            @Html.DisplayFor(itemsModel => items.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemsModel => items.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemsModel => items.HireDate)
+                        </td>
+                        @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                        {
+                        <td>
+                            @foreach (var course in items.CourseAssignments)
+                            {
+                                @course.Course.CourseID @: @course.Course.Title <br />
+                            }
+                        </td>
+                        }
+                            @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                            {
+                            <td>
+                                <a as-action="Index" asp-route-id="@items.InstructorID">Select</a> |
+                                <a asp-action="Edit" asp-route-id="@items.InstructorID">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@items.InstructorID">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@items.InstructorID">Delete</a>
+                            </td>
+                        }
+                        else 
+                        {
+                            <td>
+                                <a asp-action="Details" asp-route-id="@items.InstructorID">Details</a>
+                            </td>
+                        }
+                        </tr>
+                    }
+            </tbody>
+        </table>
+    </form>
+</div>
+
+@if(Model.Courses != null)
+{
+    <h3>Courses Taught By Selected Instructor</h3>
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Department</th>
+        </tr>
+        @foreach(var item in Model.Courses)
+        {
+            string selectedRow = "";
+            if(item.CourseID == (int?)ViewData["CourseID"])
+            {
+                selectedRow = "Success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @Html.ActionLink("Select","Index",new { courseID = item.CourseID })
+                </td>
+                <td>
+                    @item.CourseID
+                </td>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @item.Department.Name
+                </td>
+            </tr>
+        }
+    </table>
+}
+@if(Model.Enrollments != null)
+{
+    <h3>
+        Student Enrolled in Selected Course
+    </h3>
+    <table class="table">
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Grade</th>
+        </tr>
+        @foreach(var item in Model.Enrollments)
+        {
+            <tr>
+                <td>
+                    @item.Student.FirstName
+                </td>
+                <td>
+                    @item.Student.LastName
+                </td>
+                <td>
+                    @Html.DisplayFor(itemModel => item.Grade)
+                </td>
+            </tr>
+        }
+    </table>
+}

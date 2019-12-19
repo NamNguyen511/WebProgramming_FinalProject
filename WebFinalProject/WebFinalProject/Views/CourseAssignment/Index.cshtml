@@ -1,0 +1,61 @@
+﻿@model WebFinalProject.Models.SchoolViewModels.CourseIndexData
+@inject SignInManager<IdentityUser> signInManager;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>CourseAssigments</h1>
+
+
+
+@if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Instructor First Name</th>
+            <th>Instructor Last Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var items in Model.Instructors)
+        {
+            <tr>
+                <td>
+                    @foreach (var course in items.CourseAssignments)
+                    {
+                       @course.Course.CourseID @: @course.Course.Title <br />
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(itemsModel => items.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(itemsModel => items.LastName)
+                </td>
+
+                @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="Details" , asp-route-id="  @items.InstructorID">Details</a> | 
+                        <a asp-action="Delete" , asp-route-id="  @items.InstructorID">Delete</a>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a asp-action="Details" , asp-route-id="  @items.InstructorID">Details</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

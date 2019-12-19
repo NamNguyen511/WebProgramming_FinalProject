@@ -1,0 +1,40 @@
+﻿@model WebFinalProject.Models.Student
+
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create New</h1>
+<p>Student</p>
+
+    <form asp-action="Create" asp-route-returnurl=" @Context.Request.Query["ReturnUrl"]">
+        <div class="form-group">
+            <label asp-for="FirstName" class="control-label"></label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName" class="control-label"></label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Birthday" class="control-label"></label>
+            <input asp-for="Birthday" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="EnrollmentDate" class="control-label"></label>
+            <input asp-for="EnrollmentDate" class="form-control" />
+        </div>
+        <hr />
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </form>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+    @section Scripts {
+        @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

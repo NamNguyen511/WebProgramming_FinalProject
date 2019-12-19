@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WebFinalProject.Models.Student>
+@inject SignInManager<IdentityUser> signInManager;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Student</h1>
+
+<h3>Student List</h3>
+
+@if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+            <th>@Html.DisplayNameFor(model => model.LastName)</th>
+            
+            <th>@Html.DisplayNameFor(model => model.Birthday)</th>
+            <th>@Html.DisplayNameFor(model => model.EnrollmentDate)</th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var items in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(itemsModel => items.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(itemsModel => items.LastName)
+                </td>
+                 <td>
+                        @Html.DisplayFor(itemsModel => items.Birthday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(itemsModel => items.EnrollmentDate)
+                    </td>
+                
+
+                @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="Edit" , asp-route-id="@items.StudentID">Edit</a> |
+                        <a asp-action="Details" , asp-route-id="@items.StudentID">Details</a> | 
+                        <a asp-action="Delete" , asp-route-id="@items.StudentID">Delete</a>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a asp-action="Details" , asp-route-id="@items.StudentID">Details</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

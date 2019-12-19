@@ -1,0 +1,143 @@
+﻿<Properties StartupConfiguration="{93B9F65C-1B78-48A0-BDBC-1EE35B60F6D3}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebFinalProject/Views/Shared/_Layout.cshtml">
+    <Files>
+      <File FileName="WebFinalProject/Controllers/AccountController.cs" Line="1" Column="1" />
+      <File FileName="WebFinalProject/Models/Course.cs" />
+      <File FileName="WebFinalProject/Models/Instructor.cs" />
+      <File FileName="WebFinalProject/Models/Enrollment.cs" />
+      <File FileName="WebFinalProject/Models/Department.cs" />
+      <File FileName="WebFinalProject/Models/CourseAssignment.cs" />
+      <File FileName="WebFinalProject/Controllers/UTEUniversityController.cs" />
+      <File FileName="WebFinalProject/Views/UTEUniversity/Index.cshtml" />
+      <File FileName="WebFinalProject/Controllers/StudentController.cs" />
+      <File FileName="WebFinalProject/Data/UTEUniversityContext.cs" />
+      <File FileName="WebFinalProject/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="WebFinalProject/Views/Student/Create.cshtml" />
+      <File FileName="WebFinalProject/Data/SeedData.cs" />
+      <File FileName="WebFinalProject/Views/Student/Edit.cshtml" />
+      <File FileName="WebFinalProject/Views/Student/Index.cshtml" />
+      <File FileName="WebFinalProject/Views/Student/Details.cshtml" />
+      <File FileName="WebFinalProject/Views/Student/Delete.cshtml" />
+      <File FileName="WebFinalProject/Views/Instructor/Index.cshtml" />
+      <File FileName="WebFinalProject/Controllers/InstructorController.cs" />
+      <File FileName="WebFinalProject/Views/Course/Index.cshtml" />
+      <File FileName="WebFinalProject/Controllers/CourseController.cs" />
+      <File FileName="WebFinalProject/Views/Department/Index.cshtml" />
+      <File FileName="WebFinalProject/Controllers/DepartmentController.cs" />
+      <File FileName="WebFinalProject/Views/Course/Edit.cshtml" />
+      <File FileName="WebFinalProject/wwwroot/js/Confirmed.js" />
+      <File FileName="WebFinalProject/Models/ErrorViewModel.cs" />
+      <File FileName="WebFinalProject/Properties/launchSettings.json" />
+      <File FileName="WebFinalProject/Migrations/20191128024410_ComplexDataModel.cs" />
+      <File FileName="WebFinalProject/Models/Register.cs" />
+      <File FileName="WebFinalProject/Views/Account/Register.cshtml" />
+      <File FileName="WebFinalProject/Views/Shared/Error.cshtml" />
+      <File FileName="WebFinalProject/Views/_ViewImports.cshtml" />
+      <File FileName="WebFinalProject/Models/Login.cs" />
+      <File FileName="WebFinalProject/Views/Account/Login.cshtml" />
+      <File FileName="WebFinalProject/Utilities/ValidEmailDomainAttributes.cs" />
+      <File FileName="WebFinalProject/Controllers/AdministrationController.cs" />
+      <File FileName="WebFinalProject/Models/CreateRole.cs" />
+      <File FileName="WebFinalProject/Views/Administration/ListRoles.cshtml" />
+      <File FileName="WebFinalProject/Models/EditRole.cs" />
+      <File FileName="WebFinalProject/Views/Administration/EditRole.cshtml" />
+      <File FileName="WebFinalProject/Models/UserRole.cs" />
+      <File FileName="WebFinalProject/Views/Administration/EditUserInRole.cshtml" />
+      <File FileName="WebFinalProject/Views/Administration/CreateRole.cshtml" />
+      <File FileName="WebFinalProject/Program.cs" />
+      <File FileName="WebFinalProject/wwwroot/css/site.css" />
+      <File FileName="WebFinalProject/wwwroot/css/UTEUniversity.css" />
+      <File FileName="WebFinalProject/Views/_ViewStart.cshtml" />
+      <File FileName="WebFinalProject/wwwroot/lib/bootstrap/dist/css/bootstrap.css" />
+      <File FileName="WebFinalProject/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+      <File FileName="WebFinalProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" />
+      <File FileName="WebFinalProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" />
+      <File FileName="WebFinalProject/Migrations/UTEUniversityContextModelSnapshot.cs" />
+      <File FileName="WebFinalProject/Migrations/20191128024410_ComplexDataModel.Designer.cs" />
+      <File FileName="WebFinalProject/Views/Course/Create.cshtml" />
+      <File FileName="WebFinalProject/Views/Course/Delete.cshtml" />
+      <File FileName="WebFinalProject/Models/SchoolViewModels/AssignedCourseData.cs" />
+      <File FileName="WebFinalProject/Views/Instructor/Edit.cshtml" />
+      <File FileName="WebFinalProject/Views/Instructor/Delete.cshtml" />
+      <File FileName="WebFinalProject/Views/Instructor/Create.cshtml" />
+      <File FileName="WebFinalProject/wwwroot/js/site.js" />
+      <File FileName="WebFinalProject/Views/CourseAssignment/Index.cshtml" />
+      <File FileName="WebFinalProject/Controllers/CourseAssignmentController.cs" />
+      <File FileName="WebFinalProject/Views/Administration/ListUsers.cshtml" />
+      <File FileName="WebFinalProject/Models/SchoolViewModels/ForgotPassword.cs" />
+      <File FileName="WebFinalProject/Views/Account/ConfirmEmail.cshtml" />
+      <File FileName="WebFinalProject/Views/Account/Error1.cshtml" />
+      <File FileName="WebFinalProject/Views/Account/ForgotPassword.cshtml" />
+      <File FileName="WebFinalProject/Views/Account/ForgotPasswordConfirmation.cshtml" />
+      <File FileName="WebFinalProject/Models/SchoolViewModels/ResetPassword.cs" />
+      <File FileName="WebFinalProject/Views/Account/ResetPassword.cshtml" />
+      <File FileName="WebFinalProject/Views/Account/ResetPasswordConfirmation.cshtml" />
+      <File FileName="WebFinalProject/Models/SchoolViewModels/InstructorIndexData.cs" />
+      <File FileName="WebFinalProject/Views/Instructor/Details.cshtml" />
+      <File FileName="WebFinalProject/Models/SchoolViewModels/EditUser.cs" />
+      <File FileName="WebFinalProject/Views/Administration/EditUser.cshtml" />
+      <File FileName="WebFinalProject/Models/SchoolViewModels/UserRoles.cs" />
+      <File FileName="WebFinalProject/Views/Administration/ManageUserRoles.cshtml" />
+      <File FileName="WebFinalProject/Views/Course/Details.cshtml" />
+      <File FileName="WebFinalProject/Models/SchoolViewModels/CourseIndexData.cs" />
+      <File FileName="WebFinalProject/Views/Department/Create.cshtml" />
+      <File FileName="WebFinalProject/Views/Department/edit.cshtml" />
+      <File FileName="WebFinalProject/appsettings.json" />
+      <File FileName="WebFinalProject/Views/Department/Details.cshtml" />
+      <File FileName="WebFinalProject/Views/Department/Delete.cshtml" />
+      <File FileName="WebFinalProject/Models/SchoolViewModels/EnrollmentIndexData.cs" />
+      <File FileName="WebFinalProject/Views/CourseAssignment/Details.cshtml" />
+      <File FileName="WebFinalProject/wwwroot/js/UTEUniversity.js" />
+      <File FileName="WebFinalProject/Views/Shared/_Layout.cshtml" Line="40" Column="9" />
+      <File FileName="WebFinalProject/wwwroot/css/main.css" />
+      <File FileName="WebFinalProject/wwwroot/favicon.ico" />
+      <File FileName="WebFinalProject/wwwroot/css/font-awesome.min.css" />
+      <File FileName="WebFinalProject/wwwroot/lib/fontawesome-free-5.12.0-web/css/fontawesome.min.css" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WebFinalProject" expanded="True">
+            <Node name="WebFinalProject" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="SchoolViewModels" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Administration" expanded="True" />
+                <Node name="Course" expanded="True" />
+                <Node name="CourseAssignment" expanded="True" />
+                <Node name="Department" expanded="True" />
+                <Node name="Instructor" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
+                <Node name="UTEUniversity" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="Images" expanded="True" />
+                <Node name="js" expanded="True" />
+                <Node name="lib" expanded="True">
+                  <Node name="jquery-validation-unobtrusive" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.WebFinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
